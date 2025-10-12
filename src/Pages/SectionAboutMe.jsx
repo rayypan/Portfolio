@@ -14,6 +14,8 @@ export default function AboutMe()
             <div className="Section-AboutMe-Photo-right">
                 <img src={Path.AboutMeDisplayPicture.DP_TOM_2} alt="My Picutre" />
             </div>
+
+        
         </div>
         </section>
     )
