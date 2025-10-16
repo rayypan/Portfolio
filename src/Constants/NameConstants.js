@@ -11,4 +11,14 @@ export const NmConstant = {
     Description3:
       "Zeroing in on precision and clarity, each project is crafted with a deliberate focus on modularity and maintainability. Rather than chasing trends, the goal is to build solutions that are logically sound, scalable, and easy to adapt. From dynamic rendering to backend readiness, every component serves a purpose—streamlining complexity into clean, reusable patterns.",
   },
+
+  Buttons:{
+    Prev:"Prev",
+    Next:"Next",
+    
+  },
+
+  Description:{
+    message:"Sandipan is a methodical and creative problem‑solver with a strong focus on building modular, reusable systems. He thrives on architecting clean, prop‑driven React components where every behavior is explicit and transparent. Blending playful curiosity with rigorous logic, he enjoys experimenting with interactive UI elements while ensuring they remain scalable and maintainable. Driven by clarity and precision, Sandipan constantly refines his work to achieve solutions that are both elegant and production‑ready.",
+  }
 };

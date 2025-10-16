@@ -129,11 +129,13 @@ export default function TechStack() {
   return (
     <section >
      {techStack.map((icon,idx)=>(
+      <div className="Section-Tech-Stack">
         <FlipCard 
         key={idx}
         front= {<Front icon={icon}/>}
         back ={<Back icon={icon}/>}
         />
+        </div>
 
      ))}
     </section>

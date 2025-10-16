@@ -1,0 +1,502 @@
+/* ===== ROOT VARIABLES ===== */
+:root {
+  --accent: #c9a961;
+  --accent-glow: rgba(201, 169, 97, 0.5);
+  --glow: rgba(201, 169, 97, 0.3);
+  --glow-subtle: rgba(201, 169, 97, 0.15);
+}
+
+/* DARK THEME */
+body.dark-theme {
+  --bg-primary: #0a0a0f;
+  --text-primary: #e8e8f0;
+  --text-secondary: #b8b8c8;
+  --accent: #c9a961;
+  --accent-glow: rgba(201, 169, 97, 0.5);
+  --glow: rgba(201, 169, 97, 0.3);
+}
+
+/* LIGHT THEME */
+body.light-theme {
+  --bg-primary: #f5f5fa;
+  --text-primary: #1a1a2e;
+  --text-secondary: #4a4a6a;
+  --accent: #c9a961;
+  --accent-glow: rgba(201, 169, 97, 0.4);
+  --glow: rgba(201, 169, 97, 0.2);
+}
+
+/* ===== GLOBAL ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 0.6s ease;
+}
+
+.App {
+  min-height: 100vh;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* ===== PIXIE DUST ===== */
+.pixie-dust-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 999;
+}
+
+.pixie-particle {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #c9a961, #c9a96144);
+  box-shadow: 0 0 15px rgba(201, 169, 97, 0.8);
+  pointer-events: none;
+  animation: pixieDust 1s ease-out forwards;
+}
+
+@keyframes pixieDust {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--tx, 0), var(--ty, 0)) scale(0);
+  }
+}
+
+/* ===== THEME TOGGLE ===== */
+.ViewMode-LightOrDark {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.ViewMode-LightOrDark img {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, var(--accent-glow), transparent);
+  border: 2px solid var(--accent);
+  padding: 10px;
+  box-shadow: 0 0 25px var(--glow);
+  transition: all 0.3s ease;
+}
+
+.ViewMode-LightOrDark img:hover {
+  box-shadow: 0 0 40px var(--accent-glow);
+  transform: scale(1.1);
+}
+
+/* ===== SECTION ABOUT ME ===== */
+section {
+  padding: 80px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.Section-AboutMe {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.Section-AboutMe-Summary-left h3 {
+  font-size: 16px;
+  color: var(--accent);
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.Section-AboutMe-Summary-left h1 {
+  font-size: 56px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--accent);
+  font-family: 'Georgia', 'Garamond', serif;
+  letter-spacing: -1px;
+  font-style: italic;
+}
+
+.Section-AboutMe-Summary-left p {
+  font-size: 18px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  min-height: 60px;
+  background: linear-gradient(90deg, var(--accent-glow), transparent);
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 3px solid var(--accent);
+}
+
+.typewriter-cursor {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.Section-AboutMe-Photo-right {
+  text-align: center;
+  perspective: 1000px;
+}
+
+.Section-AboutMe-Photo-right img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, var(--accent-glow), transparent);
+  box-shadow: 0 0 50px var(--accent-glow), 0 0 100px var(--glow);
+  object-fit: cover;
+}
+
+/* ===== TECH STACK SECTION ===== */
+section:has(.Section-Tech-Stack) {
+  padding: 80px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+.Section-Tech-Stack {
+  width: 140px;
+  height: 140px;
+  margin: 12px;
+}
+
+/* ===== FLIP CARD ===== */
+.FlipCard {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  perspective: 1000px;
+  position: relative;
+}
+
+.FlipCard-front,
+.FlipCard-back {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid var(--glow);
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+  padding: 12px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: radial-gradient(circle at 30% 30%, var(--accent-glow), transparent);
+  box-shadow: 0 0 25px var(--glow), inset 0 0 25px var(--glow);
+  transition: all 0.3s ease;
+}
+
+.FlipCard-front {
+  font-size: 40px;
+  transform: rotateY(0deg);
+}
+
+.FlipCard-front:hover {
+  box-shadow: 0 0 40px var(--accent-glow), inset 0 0 40px var(--accent-glow);
+}
+
+.FlipCard-back {
+  background: radial-gradient(circle at 70% 70%, var(--accent-glow), transparent);
+  color: var(--text-primary);
+  transform: rotateY(180deg);
+}
+
+.FlipCard-back:hover {
+  box-shadow: 0 0 40px var(--accent-glow), inset 0 0 40px var(--accent-glow);
+}
+
+.FlipCard.flipped .FlipCard-front {
+  transform: rotateY(180deg);
+}
+
+.FlipCard.flipped .FlipCard-back {
+  transform: rotateY(0deg);
+}
+
+/* ===== CAROUSEL SECTION ===== */
+section:has(.Description-Right-Carousal) {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 60px;
+  align-items: center;
+  padding: 80px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.Description-Left-Message {
+  font-size: 16px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  background: linear-gradient(90deg, var(--accent-glow), transparent);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.Description-Right-Carousal {
+  width: 300px;
+  height: 300px;
+  perspective: 1200px;
+  margin: 0 auto;
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  animation: merryGoRound 20s linear infinite;
+  transform-style: preserve-3d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel button {
+  display: none;
+}
+
+.carousel-item {
+  width: 180px;
+  height: 180px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 0 30px var(--glow);
+  animation: carouselFade 20s linear infinite;
+}
+
+.carousel-item p {
+  display: none;
+}
+
+@keyframes merryGoRound {
+  from { transform: rotateY(0deg); }
+  to { transform: rotateY(360deg); }
+}
+
+@keyframes carouselFade {
+  0% { opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* ===== PROJECT SECTION ===== */
+.Project-List {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 40px;
+  align-items: center;
+  justify-items: center;
+  padding: 80px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.Project-List-Previous,
+.Project-List-Next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Project-List-Previous button,
+.Project-List-Next button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, var(--accent-glow), transparent);
+  border: 2px solid var(--glow);
+  color: var(--accent);
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px var(--glow);
+  font-weight: bold;
+}
+
+.Project-List-Previous button:hover:not(:disabled),
+.Project-List-Next button:hover:not(:disabled) {
+  box-shadow: 0 0 30px var(--accent-glow);
+  border-color: var(--accent);
+  transform: scale(1.1);
+}
+
+.Project-List-Previous button:disabled,
+.Project-List-Next button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.Project-List-Image {
+  width: 280px;
+  height: 280px;
+  perspective: 1000px;
+}
+
+/* ===== CONTACTS SECTION ===== */
+.Contacts {
+  padding: 80px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.Contacts h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.Contacts p {
+  font-size: 16px;
+  color: var(--text-secondary);
+  margin-bottom: 40px;
+}
+
+.contact-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background: radial-gradient(circle at 30% 30%, var(--accent-glow), transparent);
+  border: 1.5px solid var(--glow);
+  border-radius: 50px;
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px var(--glow);
+}
+
+.contact-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  box-shadow: 0 0 30px var(--accent-glow);
+  transform: translateY(-3px);
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes dance {
+  0% { transform: scale(1) rotateZ(0deg); }
+  25% { transform: scale(1.05) rotateZ(-2deg); }
+  50% { transform: scale(1.08) rotateZ(2deg); }
+  75% { transform: scale(1.05) rotateZ(-1deg); }
+  100% { transform: scale(1) rotateZ(0deg); }
+}
+
+.Project-List-Image.dancing {
+  animation: dance 0.6s ease-in-out;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  section {
+    padding: 40px 20px;
+  }
+
+  .Section-AboutMe {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .Section-AboutMe-Summary-left h1 {
+    font-size: 40px;
+  }
+
+  .Section-AboutMe-Photo-right img {
+    width: 150px;
+    height: 150px;
+  }
+
+  section:has(.Description-Right-Carousal) {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .carousel-item {
+    width: 150px;
+    height: 150px;
+  }
+
+  .Project-List {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .Project-List-Previous,
+  .Project-List-Next {
+    width: 100%;
+  }
+
+  .Project-List-Previous button,
+  .Project-List-Next button {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .contact-btn {
+    padding: 10px 16px;
+    font-size: 12px;
+  }
+
+  .contact-buttons {
+    gap: 12px;
+  }
+}
