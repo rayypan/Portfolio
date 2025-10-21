@@ -1,0 +1,32 @@
+/* ---------- Compact Fixed ViewMode Button ---------- */
+.ViewMode-LightOrDark {
+    position: fixed;
+    top: 12px;     /* adjust vertical position */
+    right: 12px;   /* adjust horizontal position */
+    padding: 4px;  /* minimal padding */
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    z-index: 1000;
+    transition: transform 0.2s ease, filter 0.3s ease;
+}
+
+/* Slight hover scale */
+.ViewMode-LightOrDark:hover {
+    transform: scale(1.1);
+}
+
+/* Icon styling */
+.ViewMode-LightOrDark img {
+    width: 22px;   /* smaller icon */
+    height: 22px;
+    filter: drop-shadow(0 0 6px var(--icon-glow));
+    animation: glow 2s ease-in-out infinite;
+}
+
+/* Glow animation */
+@keyframes glow {
+    0%, 100% { filter: drop-shadow(0 0 6px var(--icon-glow)); }
+    50% { filter: drop-shadow(0 0 10px var(--icon-glow)); }
+}

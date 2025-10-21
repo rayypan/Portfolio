@@ -1,0 +1,334 @@
+/* ---------- About Me Section ---------- */
+.Section-AboutMe {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 80px 10%;
+  gap: 60px;
+  transition: background-color var(--transition-speed) ease;
+}
+
+/* ---------- Left Text Content (60%) ---------- */
+.Section-AboutMe-Summary-left {
+  flex: 0 0 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+/* Welcome Message */
+.Section-AboutMe-Summary-left h3 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--accent-color);
+  margin: 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+/* Name - Calligraphy Style */
+.Section-AboutMe-Summary-left h1 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin: 0;
+  background: linear-gradient(135deg, var(--text-color) 0%, var(--accent-color) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: 'Playfair Display', 'Georgia', serif;
+  letter-spacing: 2px;
+  line-height: 1.2;
+}
+
+/* One Liner with Typing Effect */
+.Section-AboutMe-Summary-left p {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: var(--text-color);
+  margin: 0;
+  position: relative;
+  display: inline-block;
+  padding: 15px 25px;
+  background: linear-gradient(
+    135deg,
+    rgba(169, 223, 191, 0.15),
+    rgba(0, 31, 63, 0.08)
+  );
+  border-left: 3px solid var(--accent-color);
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+}
+
+/* Blinking Cursor Effect */
+.Section-AboutMe-Summary-left p::after {
+  content: '|';
+  position: absolute;
+  right: -15px;
+  color: var(--accent-color);
+  font-weight: bold;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Dark Theme Adjustments */
+[data-theme="dark"] .Section-AboutMe-Summary-left p {
+  background: linear-gradient(
+    135deg,
+    rgba(169, 223, 191, 0.08),
+    rgba(0, 31, 63, 0.15)
+  );
+}
+
+/* ---------- Right Photo Section (40%) ---------- */
+.Section-AboutMe-Photo-right {
+  flex: 0 0 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Glowing Round Photo Container */
+.Section-AboutMe-Photo-right img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+  border: 5px solid var(--accent-color);
+  box-shadow: 
+    0 0 20px var(--accent-color),
+    0 0 40px rgba(169, 223, 191, 0.5),
+    0 0 60px rgba(169, 223, 191, 0.3),
+    inset 0 0 20px rgba(169, 223, 191, 0.1);
+  transition: transform var(--transition-speed) ease, 
+              box-shadow var(--transition-speed) ease;
+  animation: photoGlow 3s ease-in-out infinite;
+}
+
+/* Hover Effect */
+.Section-AboutMe-Photo-right img:hover {
+  transform: scale(1.05);
+  box-shadow: 
+    0 0 30px var(--accent-color),
+    0 0 60px rgba(169, 223, 191, 0.7),
+    0 0 90px rgba(169, 223, 191, 0.5),
+    inset 0 0 30px rgba(169, 223, 191, 0.2);
+}
+
+/* Glowing Animation */
+@keyframes photoGlow {
+  0%, 100% {
+    box-shadow: 
+      0 0 20px var(--accent-color),
+      0 0 40px rgba(169, 223, 191, 0.5),
+      0 0 60px rgba(169, 223, 191, 0.3),
+      inset 0 0 20px rgba(169, 223, 191, 0.1);
+  }
+  50% {
+    box-shadow: 
+      0 0 30px var(--accent-color),
+      0 0 60px rgba(169, 223, 191, 0.7),
+      0 0 90px rgba(169, 223, 191, 0.5),
+      inset 0 0 30px rgba(169, 223, 191, 0.2);
+  }
+}
+
+/* Dark Theme Glow */
+[data-theme="dark"] .Section-AboutMe-Photo-right img {
+  box-shadow: 
+    0 0 25px var(--accent-color),
+    0 0 50px rgba(169, 223, 191, 0.6),
+    0 0 75px rgba(169, 223, 191, 0.4),
+    inset 0 0 25px rgba(169, 223, 191, 0.15);
+}
+
+[data-theme="dark"] .Section-AboutMe-Photo-right img:hover {
+  box-shadow: 
+    0 0 35px var(--accent-color),
+    0 0 70px rgba(169, 223, 191, 0.8),
+    0 0 100px rgba(169, 223, 191, 0.6),
+    inset 0 0 35px rgba(169, 223, 191, 0.25);
+}
+
+/* ---------- Responsive Design ---------- */
+@media (max-width: 1024px) {
+  .Section-AboutMe {
+    padding: 60px 5%;
+    gap: 40px;
+  }
+  
+  .Section-AboutMe-Summary-left h1 {
+    font-size: 3.5rem;
+  }
+  
+  .Section-AboutMe-Photo-right img {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .Section-AboutMe {
+    flex-direction: column;
+    padding: 40px 5%;
+    min-height: auto;
+  }
+  
+  .Section-AboutMe-Summary-left,
+  .Section-AboutMe-Photo-right {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+  
+  .Section-AboutMe-Summary-left h1 {
+    font-size: 2.8rem;
+  }
+  
+  .Section-AboutMe-Summary-left p {
+    font-size: 1.1rem;
+  }
+  
+  .Section-AboutMe-Photo-right img {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+/* ---------- Typewriter Effect for One Liner ---------- */
+.Section-AboutMe-Summary-left p {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: var(--text-color);
+  margin: 0;
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  padding: 15px 25px;
+  background: linear-gradient(
+    135deg,
+    rgba(169, 223, 191, 0.15),
+    rgba(0, 31, 63, 0.08)
+  );
+  border-left: 3px solid var(--accent-color);
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+/* ---------- Typewriter Effect for One Liner ---------- */
+.Section-AboutMe-Summary-left p {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: var(--text-color);
+  margin: 0;
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  padding: 15px 25px;
+  background: linear-gradient(
+    135deg,
+    rgba(169, 223, 191, 0.15),
+    rgba(0, 31, 63, 0.08)
+  );
+  border-left: 3px solid var(--accent-color);
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+/* Animated text span */
+.Section-AboutMe-Summary-left p {
+  overflow: hidden;
+}
+
+.Section-AboutMe-Summary-left p::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 15px;
+  left: 25px;
+  color: var(--text-color);
+  white-space: normal;
+  word-wrap: break-word;
+  max-width: calc(100% - 50px);
+  overflow: hidden;
+  border-right: 3px solid var(--accent-color);
+  padding-right: 5px;
+  animation: typing 5s steps(50) 1s forwards,
+             blinkCursor 0.75s step-end infinite;
+}
+
+/* Hide original text */
+.Section-AboutMe-Summary-left p {
+  color: transparent;
+}
+
+/* Typing animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+    border-right-color: transparent;
+  }
+}
+
+/* Blinking cursor */
+@keyframes blinkCursor {
+  50% {
+    border-right-color: transparent;
+  }
+}
+
+/* Remove cursor after completion */
+.Section-AboutMe-Summary-left p::before {
+  animation: typing 5s steps(50) 1s forwards,
+             blinkCursor 0.75s step-end 0s 7,
+             removeBorder 0s 6s forwards;
+}
+
+@keyframes removeBorder {
+  to {
+    border-right-color: transparent;
+  }
+}
+
+/* Dark Theme Adjustments */
+[data-theme="dark"] .Section-AboutMe-Summary-left p {
+  background: linear-gradient(
+    135deg,
+    rgba(169, 223, 191, 0.08),
+    rgba(0, 31, 63, 0.15)
+  );
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .Section-AboutMe-Summary-left p {
+    font-size: 1.1rem;
+  }
+  
+  .Section-AboutMe-Summary-left p::before {
+    max-width: calc(100% - 40px);
+  }
+}
+
+/* ---------- About Me Section - Expanded Horizontal Spacing ---------- */
+.Section-AboutMe {
+  gap: 81px !important;
+    padding: 16px 29px 25px 9px !important;
+}
+
+

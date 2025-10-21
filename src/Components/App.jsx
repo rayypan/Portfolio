@@ -5,7 +5,7 @@ import Project from '../Pages/SectionProject';
 import DescriptionAboutMe from '../Pages/SectionDescriptionAboutMe';
 import Contacts from '../Pages/SectionContacts';
 import ViewMode from '../Pages/ViewMode';
-import "../Components/Design.css";
+import "../Styles/theme.css";
 export default function App() {
   return (
     <div className="App">

@@ -1,14 +1,22 @@
-import { Path } from "../Constants/PathConstants"
-import { useState } from "react"
+import { Path } from "../Constants/PathConstants";
+import { useState, useEffect } from "react";
+import "../Styles/ViewMode.css";
 export default function ViewMode(){
-    const [theme,setTheme]  = useState(false)
-    function handlethemeChange(e){
-       
-        setTheme(!theme);
+    const [theme, setTheme] = useState('dark')
+
+    useEffect(() => {
+        document.documentElement.setAttribute('data-theme', theme)
+    }, [theme])
+
+    function handlethemeChange(){
+        setTheme(theme === 'dark' ? 'light' : 'dark')
     }
+
     return(
-        <div className="ViewMode-LightOrDark">
-            <img src={Path.ViewMode.NightorLight} alt="ViewModeIcon" onClick={handlethemeChange}/>
-        </div>
+       
+        <button className="ViewMode-LightOrDark" onClick={handlethemeChange}>
+            <img src={Path.ViewMode.NightorLight} alt="ViewModeIcon" />
+        </button>
+        
     )
 }

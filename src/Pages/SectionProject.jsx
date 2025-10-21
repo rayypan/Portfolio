@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Path } from "../Constants/PathConstants";
 import { NmConstant } from "../Constants/NameConstants";
 import FlipCard from "../Components/FlipCards";
+import "../Styles/Projects.css";
 export default function Project() {
   var [currentIndex, setCurrentIndex] = useState(0);
 

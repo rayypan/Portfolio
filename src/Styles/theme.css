@@ -1,0 +1,77 @@
+/* ---------- Global Theme Variables ---------- */
+:root {
+  /* Light Theme */
+  --bg-color: #A9DFBF;          /* page background */
+  --text-color: #1a1a1a;        /* main text */
+  --accent-color: #001F3F;      /* buttons, links, highlights */
+  --border-color: rgba(0, 0, 0, 0.1);
+  --transition-speed: 0.3s;
+}
+
+[data-theme="dark"] {
+  --bg-color: #020f1d;          /* page background */
+  --text-color: #E5E5E5;        /* main text */
+  --accent-color: #A9DFBF;      /* buttons, links, highlights */
+  --border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ---------- Apply Global Styles ---------- */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Smooth transition for sections, divs, articles */
+section, div, article {
+  background-color: var(--bg-color);
+  transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+}
+
+/* Accent for links and buttons */
+a, button {
+  color: var(--accent-color);
+  transition: color var(--transition-speed) ease;
+}
+
+/* Borders if needed */
+.card, .container {
+  border: 1px solid var(--border-color);
+  transition: border-color var(--transition-speed) ease;
+}
+
+
+:root {
+  --icon-color: #001F3F;        /* icon color in light mode */
+  --icon-glow: rgba(0, 31, 63, 0.6);
+}
+
+[data-theme="dark"] {
+  --icon-color: #FFD700;        /* icon color in dark mode */
+  --icon-glow: rgba(255, 215, 0, 0.7);
+}
+.ViewMode-LightOrDark img {
+  width: 28px;
+  height: 28px;
+  filter: drop-shadow(0 0 6px var(--icon-glow));
+  transition: filter 0.3s ease, transform 0.3s ease;
+  color: var(--icon-color);   /* <-- this is the key */
+}
+
+/* Optional gentle glow animation */
+@keyframes glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 6px var(--icon-glow));
+  }
+  50% {
+    filter: drop-shadow(0 0 10px var(--icon-glow));
+  }
+}
+
+.ViewMode-LightOrDark img {
+  animation: glow 2s ease-in-out infinite;
+}
+
+
+

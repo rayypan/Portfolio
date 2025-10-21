@@ -1,5 +1,6 @@
 import FlipCard from "../Components/FlipCards";
 import { Path } from "../Constants/PathConstants";
+import "../Styles/TechStack.css";
 export default function TechStack() {
   let i = 0;
   const techStack = [
@@ -112,17 +113,17 @@ export default function TechStack() {
 
   function Front({icon}) {
     return (
-        <div>
+        
             <img src={icon.techStackImg} alt={icon.altName} />
 
-        </div>
+        
 
     );
   }
 
   function Back({icon}) {
     return (
-      <div>{icon.altName}</div>
+      icon.altName
     );
   }
 

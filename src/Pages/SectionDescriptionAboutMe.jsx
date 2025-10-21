@@ -5,6 +5,7 @@ import sun2_11zon from "../Photos/sun2_11zon.jpg";
 import sun3_11zon from "../Photos/sun3_11zon.jpg";
 import sun4_11zon from "../Photos/sun4_11zon.jpg";
 import sun5_11zon from "../Photos/sun5_11zon.jpg";
+import "../Styles/DescriptionAboutMe.css";
 
 export default function DescriptionAboutMe() {
   let i = 0;
@@ -47,9 +48,11 @@ export default function DescriptionAboutMe() {
   ];
   return (
     <section>
+      <div className="Description-About-Me">
       <div className="Description-Left-Message">{NmConstant.Description.message}</div>
       <div className="Description-Right-Carousal">
-        <Carousel item={item} circular={true} autoPlay={true} interval={3000} />
+        <Carousel item={item} circular={true} autoPlay={true} interval={0} />
+      </div>
       </div>
     </section>
   );

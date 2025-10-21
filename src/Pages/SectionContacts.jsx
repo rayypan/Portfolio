@@ -1,4 +1,5 @@
 import { Path } from "../Constants/PathConstants";
+import "../Styles/Contacts.css";
 export default function Contacts(){
     let i=0;
     const icons = [
@@ -12,7 +13,7 @@ export default function Contacts(){
             <div className="Contact-Section">
                 {icons.map(icon=>(
                     <div className="Contact-Section-icons" key={icon.id}>
-                    <a href={icon.link}>
+                    <a href={icon.link} target="_blank">
                         <img src={icon.src} alt={icon.alt} />
                         <path fill={icon.fill} d={icon.d}/>
                     </a>
