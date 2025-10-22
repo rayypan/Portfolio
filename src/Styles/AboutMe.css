@@ -331,4 +331,35 @@
     padding: 16px 29px 25px 9px !important;
 }
 
+/* ---------- Compact Version for About Me Section ---------- */
+.Section-AboutMe {
+  min-height: 85vh !important; /* reduces height slightly */
+  padding: 60px 8% !important; /* balanced padding */
+  gap: 45px !important;        /* tighter spacing between text and photo */
+}
+
+/* Slightly reduce photo & text scaling for compact look */
+.Section-AboutMe-Photo-right img {
+  width: 300px !important;
+  height: 300px !important;
+}
+
+.Section-AboutMe-Summary-left h1 {
+  font-size: 3.8rem !important;
+}
+
+.Section-AboutMe-Summary-left p {
+  font-size: 1.2rem !important;
+  padding: 12px 20px !important;
+}
+/* === Fix: Ensure Face Visible in Circular Photo === */
+.Section-AboutMe-Photo-right img {
+  object-fit: contain !important;       /* ensures full face stays visible */
+  object-position: center top !important; /* adjusts focus to upper part (face) */
+  width: 340px !important;               /* slightly larger for visibility */
+  height: 340px !important;
+  border-radius: 50% !important;
+  background-color: rgba(255, 255, 255, 0.05); /* subtle fill behind image */
+}
+
 

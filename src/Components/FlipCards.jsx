@@ -1,13 +1,12 @@
 
 import { useState } from "react";
-import "../Styles/Flipcard.css";
 export default function FlipCard({front, back}) {
   const [isFlipped, setIsFlipped] = useState(false)
   const [isDancing, setIsDancing] = useState(false)
 
   const  handleclick=()=>{
     setIsFlipped(!isFlipped);
-    setIsDancing(!isDancing);
+    setIsDancing(true);
     setTimeout(() => setIsDancing(false), 600);
 
   }

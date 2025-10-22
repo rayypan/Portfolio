@@ -8,8 +8,9 @@ export default function Contacts(){
         {id:++i,src:Path.ContactSection.LINKEDIN,alt:"LinkedIn",link:"",fill:"currentColor",d:"M19 0h-14c-2.76 0-5 2.24-5 5...z"}
     ]
     return (
-        <section>
+       
 
+        
             <div className="Contact-Section">
                 {icons.map(icon=>(
                     <div className="Contact-Section-icons" key={icon.id}>
@@ -21,7 +22,8 @@ export default function Contacts(){
                 ))}
                 
             </div>
+      
 
-        </section>
+
     )
 }

@@ -113,9 +113,9 @@ export default function TechStack() {
 
   function Front({icon}) {
     return (
-        
+        <div className="TechStack-Front">
             <img src={icon.techStackImg} alt={icon.altName} />
-
+</div>
         
 
     );
@@ -123,16 +123,17 @@ export default function TechStack() {
 
   function Back({icon}) {
     return (
-      icon.altName
+      <div className="TechStack-Back">{icon.altName}</div>
+      
     );
   }
 
   return (
-    <section >
+    <section className="TechStack-Section">
      {techStack.map((icon,idx)=>(
-      <div className="Section-Tech-Stack">
+      <div className="Section-Tech-Stack" key={icon.id}>
         <FlipCard 
-        key={idx}
+        
         front= {<Front icon={icon}/>}
         back ={<Back icon={icon}/>}
         />

@@ -6,7 +6,7 @@
 }
 
 /* Main Section - 60:40 Split Layout - FORCED ROW */
-section {
+section.Description-About-Me-Section {
   display: flex !important;
   flex-direction: row !important;
   align-items: center !important;
@@ -18,7 +18,7 @@ section {
 }
 
 /* Override themed.css for this section */
-section > div {
+section.Description-About-Me-Section > div {
   background-color: transparent !important;
 }
 
@@ -393,7 +393,7 @@ section > div {
 }
 
 @media (max-width: 1024px) {
-  section {
+  section.Description-About-Me-Section {
     flex-direction: column !important;
     gap: 2rem !important;
     padding: 3rem 1.5rem !important;
