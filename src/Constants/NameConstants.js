@@ -1,4 +1,4 @@
-import Lottie from "lottie-react";
+
 export const NmConstant = {
   AboutMe: {
     Welcome_Message: "Hi there!👋",
