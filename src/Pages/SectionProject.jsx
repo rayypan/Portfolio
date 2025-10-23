@@ -11,19 +11,19 @@ export default function Project() {
   const projects = [
     {
       id: ++i,
-      projectImg: Path.ProjectPicture.Pic1,
+      projectImg: Path.ProjectSection.STUDENT_MANAGEMENT_SYSTEM,
       projectDescription: NmConstant.AboutMe.Description1,
       title:"ABC",
     },
     {
       id: ++i,
-      projectImg: Path.ProjectPicture.Pic2,
+      projectImg: Path.ProjectSection.PORTFOLIO,
       projectDescription: NmConstant.AboutMe.Description2,
       title:"DEF",
     },
     {
       id: ++i,
-      projectImg: Path.AboutMeDisplayPicture.DP_TOM_1,
+      projectImg: Path.ProjectSection.CERVIPREDICT,
       projectDescription: NmConstant.AboutMe.Description3,
       title:"GHI",
     },

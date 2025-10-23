@@ -1,9 +1,9 @@
 
 export const NmConstant = {
   AboutMe: {
-    Welcome_Message: "Hi there!👋",
+    Welcome_Message: "Hi there!",
     Name: "I'm ray_pan",
-    OneLiner: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vel tincidunt fermentum, justo sapien tincidunt sapien, nec facilisis lorem nulla nec nulla. Curabitur vel sem vitae justo tincidunt bibendum. Integer ac orci nec sapien convallis tincidunt. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse potenti. Vivamus euismod, risus in facilisis feugiat, justo nulla tincidunt purus, nec tincidunt sapien lorem nec nulla.",
+    OneLiner: "The magic happens when ideas become meaningful creations, driven by curiosity, creativity, and a passion for exploration.",
     Description1:
       "Each project showcased here represents a unique blend of creativity, logic, and technical precision. From frontend interfaces to backend integrations, these builds demonstrate a commitment to clean architecture and scalable design. Whether it's solving real-world problems or experimenting with new technologies, every project reflects a thoughtful approach to development and a passion for building impactful solutions.",
     Description2:
