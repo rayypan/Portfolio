@@ -12,20 +12,20 @@ export default function Project() {
     {
       id: ++i,
       projectImg: Path.ProjectSection.STUDENT_MANAGEMENT_SYSTEM,
-      projectDescription: NmConstant.AboutMe.Description1,
-      title:"ABC",
+      projectDescription: NmConstant.Projects.StudentManagementSystem,
+      title:"Student Management System",
     },
     {
       id: ++i,
       projectImg: Path.ProjectSection.PORTFOLIO,
-      projectDescription: NmConstant.AboutMe.Description2,
-      title:"DEF",
+      projectDescription: NmConstant.Projects.PersonalPortfolio,
+      title:"Personal Portfolio",
     },
     {
       id: ++i,
       projectImg: Path.ProjectSection.CERVIPREDICT,
-      projectDescription: NmConstant.AboutMe.Description3,
-      title:"GHI",
+      projectDescription: NmConstant.Projects.CerviPredict,
+      title:"CerviPredict",
     },
   ];
 
@@ -46,7 +46,7 @@ export default function Project() {
       <div>
         
         <img src={frontcard.projectImg} alt="Img" />
-        <p>{frontcard.title}</p>
+        <p>{frontcard.title}<span>| Flip to know more</span></p>
       </div>
     );
   }

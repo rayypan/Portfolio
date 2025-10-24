@@ -1,15 +1,9 @@
 
 export const NmConstant = {
   AboutMe: {
-    Welcome_Message: "Hi there!",
-    Name: "I'm ray_pan",
+    Welcome_Message: "Hi there! Nice to meet you",
+    Name: "Ray_Pan",
     OneLiner: "The magic happens when ideas become meaningful creations, driven by curiosity, creativity, and a passion for exploration.",
-    Description1:
-      "Each project showcased here represents a unique blend of creativity, logic, and technical precision. From frontend interfaces to backend integrations, these builds demonstrate a commitment to clean architecture and scalable design. Whether it's solving real-world problems or experimenting with new technologies, every project reflects a thoughtful approach to development and a passion for building impactful solutions.",
-    Description2:
-      "Behind every interface lies a layer of logic that drives the experience. These projects combine clean architecture with interactive elements, ensuring that form never compromises function. Whether it's dynamic rendering, reusable components, or backend readiness, each solution is crafted with a balance of performance and clarity in mind.",
-    Description3:
-      "Zeroing in on precision and clarity, each project is crafted with a deliberate focus on modularity and maintainability. Rather than chasing trends, the goal is to build solutions that are logically sound, scalable, and easy to adapt. From dynamic rendering to backend readiness, every component serves a purpose—streamlining complexity into clean, reusable patterns.",
   },
 
   Buttons:{
@@ -19,12 +13,19 @@ export const NmConstant = {
   },
 
   Description:{
-    message:"Sandipan is a methodical and creative problem‑solver with a strong focus on building modular, reusable systems. He thrives on architecting clean, prop‑driven React components where every behavior is explicit and transparent. Blending playful curiosity with rigorous logic, he enjoys experimenting with interactive UI elements while ensuring they remain scalable and maintainable. Driven by clarity and precision, Sandipan constantly refines his work to achieve solutions that are both elegant and production‑ready.",
+    message:"ray_pan is passionate about creating through code and thoughtful projects, loving teamwork and collaborating with others to bring ideas to life. Sometimes writes to express thoughts and reflections. A coder by passion and a full-time debugger by fate, navigating tricky bugs. A balance of creativity and logic guides every endeavor, making work meaningful, engaging, and purposeful.",
   },
 
   Contacts: {
     GITHUB : "https://github.com/rayypan",
     EMAIL : "mailto:sandipanray2002@gmail.com",
-    LINKEDIN : "linkedin.com/in/rayyypan",
+    LINKEDIN : "https://linkedin.com/in/rayyypan",
+  },
+
+  Projects: {
+
+    StudentManagementSystem : "Full-stack app using Spring Boot, ReactJS & MySQL to manage student profiles, courses, and records. Features CRUD operations, file uploads, and role-based access for admins and students.",
+    PersonalPortfolio: "Personal portfolio website built with ReactJS to showcase projects, skills, and experience. Features modular components and a responsive design for seamless viewing across devices.",
+    CerviPredict: "Machine learning model using medical images to predict cervical cancer risk, aiding early detection and faster medical intervention.",
   }
 };

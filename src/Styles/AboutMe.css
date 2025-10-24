@@ -361,5 +361,17 @@
   border-radius: 50% !important;
   background-color: rgba(255, 255, 255, 0.05); /* subtle fill behind image */
 }
+/* Forceful Calligraphy Style for Name using system fonts */
+.Section-AboutMe-Summary-left h1 {
+    font-family: 'Brush Script MT', 'Lucida Handwriting', cursive !important;
+    font-size: 4.5rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 2px !important;
+    line-height: 1.2 !important;
+    background: linear-gradient(135deg, var(--text-color) 0%, var(--accent-color) 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
 
 

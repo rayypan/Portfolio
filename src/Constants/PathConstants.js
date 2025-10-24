@@ -25,18 +25,23 @@ import TIME_MANAGEMENT from "../Photos/timemanagement.png";
 import TEAM_WORK from "../Photos/teamwork.png";
 import CSS from "../Photos/css.png";
 import JIRA from "../Photos/Jira.svg";
-import PORTFOLIO from "../Photos/PortfolioPoster.png";
-import STUDENT_MANAGEMENT_SYSTEM from "../Photos/StudentManagementSystem.jpeg";
-import CERVIPREDICT from "../Photos/CerviPredict.png";
+import PORTFOLIO from "../Photos/portfolio.png";
+import CERVIPREDICT from "../Photos/cervicalcancer.png";
+import STUDENT_MANAGEMENT_SYSTEM from "../Photos/StudMngmentSystem.png";
+import FLIP from "../Photos/flip.svg";
+import WRITING from "../Photos/writing.png";
+import CODING from "../Photos/Coding.png";
+import DRIVES from "../Photos/drives.png";
+import HISTORICAL from "../Photos/Historical.png";
+import SUNSET from "../Photos/sunset.png";
+import DP from "../Photos/TomSmile.png";
+
 export const Path = {
-  AboutMeDisplayPicture: {
-    DP_TOM_1: DisplayPic1Tom,
-    DP_TOM_2: DisplayPic2Tom,
+  DisplayPicture: {
+      DP : DisplayPic2Tom,
+   
   },
-  ProjectPicture: {
-    Pic1: M1,
-    Pic2: M2,
-  },
+  
   ContactSection: {
     LINKEDIN: LinkedIn,
     GITHUB: GITHUB,
@@ -73,5 +78,14 @@ export const Path = {
     STUDENT_MANAGEMENT_SYSTEM: STUDENT_MANAGEMENT_SYSTEM,
     PORTFOLIO: PORTFOLIO,
     CERVIPREDICT: CERVIPREDICT,
+    FLIP : FLIP,
   },
+
+  Description : {
+    CODING : CODING,
+    DRIVES : DRIVES,
+    HISTORICAL : HISTORICAL,
+    SUNSET : SUNSET,
+    WRITING : WRITING,
+  }
 };

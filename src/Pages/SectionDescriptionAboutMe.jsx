@@ -1,10 +1,6 @@
 import Carousel from "../Components/Carousal";
 import { NmConstant } from "../Constants/NameConstants";
-import sun1 from "../Photos/sun1.jpg";
-import sun2_11zon from "../Photos/sun2_11zon.jpg";
-import sun3_11zon from "../Photos/sun3_11zon.jpg";
-import sun4_11zon from "../Photos/sun4_11zon.jpg";
-import sun5_11zon from "../Photos/sun5_11zon.jpg";
+import { Path } from "../Constants/PathConstants";
 import "../Styles/DescriptionDetailsAboutMe.css";
 
 export default function DescriptionAboutMe() {
@@ -12,38 +8,38 @@ export default function DescriptionAboutMe() {
   const item = [
     {
       id: ++i,
-      src:  sun1 ,
-      altImg: "A",
+      src:  Path.Description.DRIVES ,
+      altImg: "long-rides",
       message:
-        "The Sun is a giant ball of hot plasma that powers life on Earth with its light and heat.",
+        "Loves long drives and spontaneous adventures.",
     },
     {
       id: ++i,
-      src:  sun2_11zon ,
-      altImg: "B",
+      src:  Path.Description.SUNSET ,
+      altImg: "sunsets and breezes",
       message:
-        "Every second, the Sun fuses about 600 million tons of hydrogen into helium, releasing immense energy",
+        "sunsets and sea breezes.",
     },
     {
       id: ++i,
-      src: sun3_11zon ,
-      altImg: "C",
+      src: Path.Description.HISTORICAL ,
+      altImg: "History",
       message:
-        "At 150 million kilometers away, sunlight still reaches Earth in just about 8 minutes.",
+        "Fascinated by history and cultural stories.",
     },
     {
       id: ++i,
-      src:  sun4_11zon ,
-      altImg: "D",
+      src:  Path.Description.CODING ,
+      altImg: "coding",
       message:
-        "The Sun makes up more than 99% of the total mass of our solar system.",
+        "creating solutions and building with code.",
     },
     {
       id: ++i,
-      src: sun5_11zon,
-      altImg: "E",
+      src: Path.Description.WRITING,
+      altImg: "writing",
       message:
-        "One day, the Sun will expand into a red giant, swallowing the inner planets before fading into a white dwarf.",
+        "Sometimes words are the best way, and writing helps bring thoughts to life.",
     },
   ];
   return (

@@ -13,7 +13,7 @@ export default function AboutMe()
                 <p data-text={NmConstant.AboutMe.OneLiner}>{NmConstant.AboutMe.OneLiner}</p>
             </div>
             <div className="Section-AboutMe-Photo-right">
-                <img src={Path.AboutMeDisplayPicture.DP_TOM_2} alt="My Picutre" />
+                <img src={Path.DisplayPicture.DP} alt="My Picutre" />
             </div>
 
         

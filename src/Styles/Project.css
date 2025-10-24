@@ -647,3 +647,13 @@
     0 10px 35px rgba(255, 255, 255, 0.25),
     0 0 15px rgba(255, 255, 255, 0.3);
 }
+
+.Project-List span {
+  font-size: 0.8rem;           /* smaller text */
+  color: rgba(254 254 254);   /* faded grey */
+  display: inline-block;        /* needed for positioning */
+  position: relative;
+  top: 10px;                     /* move it slightly down */
+  margin-left: 10px;
+}
+
